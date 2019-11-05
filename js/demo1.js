@@ -1,102 +1,84 @@
-class ShapeOverlays {
-  constructor(elm) {
-    this.elm = elm;
-    this.path = elm.querySelectorAll('path');
-    this.numPoints = 18;
-    this.duration = 600;
-    this.delayPointsArray = [];
-    this.delayPointsMax = 300;
-    this.delayPerPath = 100;
-    this.timeStart = Date.now();
-    this.isOpened = false;
-    this.isAnimating = false;
-  }
-  toggle() {
-    this.isAnimating = true;
-    const range = 4 * Math.random() + 6;
-    for (var i = 0; i < this.numPoints; i++) {
-      const radian = i / (this.numPoints - 1) * Math.PI;
-      this.delayPointsArray[i] = (Math.sin(-radian) + Math.sin(-radian * range) + 2) / 4 * this.delayPointsMax;
-    }
-    if (this.isOpened === false) {
-      this.open();
-    } else {
-      this.close();
-    }
-  }
-  open() {
-    this.isOpened = true;
-    this.elm.classList.add('is-opened');
-    this.timeStart = Date.now();
-    this.renderLoop();
-  }
-  close() {
-    this.isOpened = false;
-    this.elm.classList.remove('is-opened');
-    this.timeStart = Date.now();
-    this.renderLoop();
-  }
-  updatePath(time) {
-    const points = [];
-    for (var i = 0; i < this.numPoints + 1; i++) {
-      points[i] = ease.cubicInOut(Math.min(Math.max(time - this.delayPointsArray[i], 0) / this.duration, 1)) * 100
+/**
+ * demo1.js
+ * http://www.codrops.com
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * Copyright 2018, Codrops
+ * http://www.codrops.com
+ */
+{
+    const chars = ['$','%','#','@','&','(',')','=','*','/'];
+    const charsTotal = chars.length;
+    const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+    class Entry {
+        constructor(el) {
+            this.DOM = {el: el};
+            this.DOM.image = this.DOM.el.querySelector('.content__img');
+            this.DOM.title = {word: this.DOM.el.querySelector('.content__text')};
+            charming(this.DOM.title.word);
+            this.DOM.title.letters = Array.from(this.DOM.title.word.querySelectorAll('span'));
+            this.DOM.title.letters.forEach(letter => letter.dataset.initial = letter.innerHTML);
+            this.lettersTotal = this.DOM.title.letters.length;
+            observer.observe(this.DOM.el);
+        }  
+        enter(direction = 'down') {
+            this.DOM.title.word.style.opacity = 1;
+            
+            this.timeouts = [];
+            this.complete = false;
+            let cnt = 0;
+            this.DOM.title.letters.forEach((letter, pos) => {
+                const timeout = setTimeout(() => {
+                    letter.innerHTML = chars[getRandomInt(0,charsTotal-1)];
+                    setTimeout(() => {
+                        letter.innerHTML = letter.dataset.initial;
+                        ++cnt;
+                        if ( cnt === this.lettersTotal ) {
+                            this.complete = true;
+                        }
+                    }, 100);
+                }, pos*80);
+                this.timeouts.push(timeout);
+            });
+        }
+        exit(direction = 'down') {
+            this.DOM.title.word.style.opacity = 0;
+            if ( this.complete ) return;
+            for ( let i = 0, len = this.timeouts.length; i <= len - 1; ++i ) {
+                clearTimeout(this.timeouts[i]);
+            }
+        }  
     }
 
-    let str = '';
-    str += (this.isOpened) ? `M 0 0 V ${points[0]} ` : `M 0 ${points[0]} `;
-    for (var i = 0; i < this.numPoints - 1; i++) {
-      const p = (i + 1) / (this.numPoints - 1) * 100;
-      const cp = p - (1 / (this.numPoints - 1) * 100) / 2;
-      str += `C ${cp} ${points[i]} ${cp} ${points[i + 1]} ${p} ${points[i + 1]} `;
-    }
-    str += (this.isOpened) ? `V 0 H 0` : `V 100 H 0`;
-    return str;
-  }
-  render() {
-    if (this.isOpened) {
-      for (var i = 0; i < this.path.length; i++) {
-        this.path[i].setAttribute('d', this.updatePath(Date.now() - (this.timeStart + this.delayPerPath * i)));
-      }
-    } else {
-      for (var i = 0; i < this.path.length; i++) {
-        this.path[i].setAttribute('d', this.updatePath(Date.now() - (this.timeStart + this.delayPerPath * (this.path.length - i - 1))));
-      }
-    }
-  }
-  renderLoop() {
-    this.render();
-    if (Date.now() - this.timeStart < this.duration + this.delayPerPath * (this.path.length - 1) + this.delayPointsMax) {
-      requestAnimationFrame(() => {
-        this.renderLoop();
-      });
-    }
-    else {
-      this.isAnimating = false;
-    }
-  }
+    let observer;
+    let current = -1;
+    let allentries = [];
+    const sections = Array.from(document.querySelectorAll('.content__section'));
+    // Preload all the images in the page..
+	imagesLoaded(document.querySelectorAll('.content__img'), () => {
+        document.body.classList.remove('loading');
+        if ('IntersectionObserver' in window) {
+            document.body.classList.add('ioapi');
+
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if ( entry.intersectionRatio > 0.5 ) {
+                        const newcurrent = sections.indexOf(entry.target);
+                        if ( newcurrent === current ) return;
+                        const direction = newcurrent > current;
+                        if (current >= 0 ) {
+                            allentries[current].exit(direction ? 'down' : 'up');
+                        }
+                        allentries[newcurrent].enter(direction ? 'down' : 'up');
+                        current = newcurrent;
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            sections.forEach(section => allentries.push(new Entry(section)));
+        }
+    });
 }
-
-(function() {
-  const elmHamburger = document.querySelector('.hamburger');
-  const gNavItems = document.querySelectorAll('.global-menu__item');
-  const elmOverlay = document.querySelector('.shape-overlays');
-  const overlay = new ShapeOverlays(elmOverlay);
-
-  elmHamburger.addEventListener('click', () => {
-    if (overlay.isAnimating) {
-      return false;
-    }
-    overlay.toggle();
-    if (overlay.isOpened === true) {
-      elmHamburger.classList.add('is-opened-navi');
-      for (var i = 0; i < gNavItems.length; i++) {
-        gNavItems[i].classList.add('is-opened');
-      }
-    } else {
-      elmHamburger.classList.remove('is-opened-navi');
-      for (var i = 0; i < gNavItems.length; i++) {
-        gNavItems[i].classList.remove('is-opened');
-      }
-    }
-  });
-}());
