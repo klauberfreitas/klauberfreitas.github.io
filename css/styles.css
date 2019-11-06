@@ -1,8 +1,3 @@
-/* Template: Juno - Multipurpose Landing Page Pack
-   Author: InovatikThemes
-   Created: Mar 2019
-   Description: Master CSS file
-*/
 
 /*****************************************
 Table Of Contents:
@@ -676,6 +671,7 @@ input[type='checkbox'] {
 	text-decoration: none;
 }
 
+/* LINK ATIVO MENU */
 .navbar-custom .nav-item .nav-link:hover,
 .navbar-custom .nav-item .nav-link.active {
 	color: #de4a3d;
@@ -710,8 +706,14 @@ input[type='checkbox'] {
 
 .demo-1 {
 	--color-link: #de4a3d !important;
-	
 	}
+.social-main {
+		--color-link: #212121 !important;
+		margin-left: 85% !important
+}
+	
+
+
 .orientation {
 	font-size: 8rem !important;
 	bottom: 8vmax;
@@ -719,7 +721,6 @@ input[type='checkbox'] {
 	padding-left: 6vmax;
 	z-index: 1000;
 	line-height: 0.8;
-
 
 
 }
@@ -1800,12 +1801,7 @@ a:hover.back-to-top {
 		text-align: left;
 	}
 
-	.header .text-container {
-		margin-top: 6.5rem;
-	}
-	/* end of header */
-
-
+	
 	/* Features */
 	.tabs .card-body {
 		padding: 1rem 0 1.5rem 0;
