@@ -1,151 +1,288 @@
-</a>
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Oi Kabin/ Portfólio
-	</title>
-	<meta name="description"
-		content="A scrolling letters animation where some text changes depending on the page's scroll position" />
-	<meta name="keywords" content="scroll, letters, animation, javascript, web design, web development" />
-	<meta name="author" content="Codrops" />
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/base.css" />
-	<link rel="stylesheet" type="text/css" href="css/demo1.css" />
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/flickity.css" />
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<script src="js/modernizr.custom.js"></script>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Portfólio Klauber Freitas">
+    <meta name="author" content="Inovatik">
 
-	<script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>OiKabin - Portfólio</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/loader.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/flickity.css" />
+
+    <script src="js/modernizr.custom.js"></script>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png">
+
+    <div class="content__section">
+            <p class="info orientation content__text"><a href="/">portfólio</a></p>
+
+     </div>
 </head>
 
-<body class="demo-1 loading">
-	<svg class="hidden">
-		<symbol id="icon-arrow" viewBox="0 0 24 24">
-			<title>arrow</title>
-			<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
-		</symbol>
-		<symbol id="icon-drop" viewBox="0 0 24 24">
-			<title>drop</title>
-			<path
-				d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z" />
-			<path
-				d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z" />
-		</symbol>
+<body class="demo-1 loading" data-spy="scroll" data-target=".fixed-top">
 
-	</svg>
+    <!-- 
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    of preloader -->
+    <div class="spinner-wrapper">
+    <div class="loader" data-text="It's loading…">OiKabin</div>
+</div>   
 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Leno</a> -->
 
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="index.html"><img src="images/log.png" alt="alternative"></a>
 
-	
-	<main>
-			<div class="menu-top">
-					<div class="menu-sub">
-						<span>PROGRAMAÇÃO</span>
-					</div>
-				</div>
-				<div class="Front_end__UI_Class">
-					<span>Front-end/ UI</span>
-				</div>
-				
-		<div class="content">
-			<header class="codrops-header">
-				<div class="codrops-links">
-					<a class="codrops-icon codrops-icon--prev" href=""
-						title="Previous Demo"><svg class="icon icon--arrow">
-							<use xlink:href="#icon-arrow"></use>
-						</svg></a>
-					<a class="codrops-icon codrops-icon--drop" href=""
-						title="Back to the article"><svg class="icon icon--drop">
-							<use xlink:href="#icon-drop"></use>
-						</svg></a>
-				</div>
-				<h1 class="codrops-header__title">Olá, pode me chamar de Kabin</h1>
-				<nav class="demos">
-					<a class="demo demo--current" href="index.html"><span>#1</span></a>
-					<a class="demo" href=""><span>Programação</span></a>
-					<a class="demo" href=""><span>Ilustração</span></a>
-					<a class="demo" href=""><span>Design Gráfico</span></a>
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
 
-				</nav>
-				<a href="" title="Find this project on GitHub"
-					class="github"><svg class="icon icon--github">
-						<use xlink:href="#icon-github"></use>
-					</svg></a>
-			</header>
-			<p class="info">Este é um texto vertical<a href="/"> você lê porque é curioso. Parabéns</a></p>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#header">Início <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#features">Programação</a>
+                </li>
 
-			<!-- 	<p class="menu-block menu__item-name">
-					<a href="https://studioakademi.com/">Programação/ </a>
-					<a href="https://studioakademi.com/">Ilustração/ </a>
-					<a href="https://studioakademi.com/">Design/ </a>	
-				</p> -->
-			<div class="content__section">
-				<p class="info orientation content__text">kabin<a href="/">portfólio</a></p>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#details" id="navbarDropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">Ilustração</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href=""><span class="item-text">Pintura Digital</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href=""><span class="item-text">Concept</span></a>
+                    </div>
+                </li>
 
-			</div>
-			<div class="hero">
-				
-				<div class="hero__back hero__back--static"></div>
-				<div class="hero__back hero__back--mover"></div>
+                <!-- Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#details" id="navbarDropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">Design</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href=""><span class="item-text">
+                                Identidade visual</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href=""><span class="item-text">Produtos</span></a>
+                    </div>
+                </li>
+                <!-- end of dropdown menu -->
 
-			</div>
-
-			<div class="stack-slider">
-				<div class="stacks-wrapper"></div>
-				<!-- /stacks-wrapper -->
-			</div>
-		
-		</div>
-
-
-
-		<!-- 	</div>
-				<div class="content__section">
-					<a class="content__link"><img class="content__img" src="img/set1/1.jpg" alt="img"/></a>
-					<h2 class="content__text orientation info">Programação</h2>
-				</div>
-				<div class="content__section">
-					<a class="content__link"><img class="content__img" src="img/set1/2.jpg" alt="img"/></a>
-					<h2 class="content__text">Cytoskeleton</h2>
-				</div>
-				<div class="content__section">
-					<a class="content__link"><img class="content__img" src="img/set1/3.jpg" alt="img"/></a>
-					<h2 class="content__text">Luminescence</h2>
-				</div>
-				<div class="content__section">
-					<a class="content__link"><img class="content__img" src="img/set1/4.jpg" alt="img"/></a>
-					<h2 class="content__text">Aboveboard</h2>
-				</div>
-				<div class="content__section">
-					<a class="content__link"><img class="content__img" src="img/set1/5.jpg" alt="img"/></a>
-					<h2 class="content__text">Rambunctious</h2>
-				</div>
-				<div class="content__section">
-					<a class="content__link content__link--nobottom"><img class="content__img" src="img/set1/6.jpg" alt="img"/></a>
-					<h2 class="content__text">Abolitionist</h2>
-				</div>
-				<div class="content__section">
-					<h2 class="content__text">Contact</h2>
-					<div class="content__contact">
-						<a href="#">Twitter</a>
-						<a href="#">Slack</a>
-						<a href="#">hello'at'quincy.com</a>
-					</div>
-				</div> -->
+              
+            </ul>
+           <!--  <span class="nav-item social-icons">
+                <span class="fa-stack">
+                    <a href="#your-link">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-facebook-f fa-stack-1x"></i>
+                    </a>
+                </span>
+                <span class="fa-stack">
+                    <a href="#your-link">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-twitter fa-stack-1x"></i>
+                    </a>
+                </span>
+            </span> -->
+        </div>
+    </nav>
 
 
-	</main>
-	<script src="js/imagesloaded.pkgd.min.js"></script>
-	<script src="js/charming.min.js"></script>
-	<script src="js/demo1.js"></script>
-	<script src="js/demo.js"></script>
-	<script src="js/flickity.pkgd.min.js"></script>
-	<script src="js/main.js"></script>
+
+
+    <header id="header" class="header">
+
+        
+    <div class="hero">
+            <div class="hero__back hero__back--static"></div>
+            <div class="hero__back hero__back--mover"></div>
+        </div>
+        <div class="stack-slider">
+            <div class="stacks-wrapper"></div>
+        </div>
+
+        
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+
+                    <!--     <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h2>CONTACT</h2>
+                                        <ul class="list-unstyled li-space-lg">
+                                            <li class="address">Don't hesitate to give us a call or just use the contact form below</li>
+                                            <li><i class="fas fa-map-marker-alt"></i>22 Innovative, San Francisco, CA 94043, US</li>
+                                            <li><i class="fas fa-phone"></i><a class="blue" href="tel:003024630820">+81 720 2212</a></li>
+                                            <li><i class="fas fa-envelope"></i><a class="blue" href="mailto:office@leno.com">office@leno.com</a></li>
+                                        </ul>
+                                    </div> 
+                                </div> 
+                             
+                            </div>  -->
+                            
+                 
+
+                    <div class="col-lg-6">
+                        <div class="text-container">
+                            <h1>KLAUBER FREITAS <br><span id="js-rotating">PROGRAMADOR, ILUSTRADOR, DESIGNER</span></h1>
+                            <p class="p-large">Formado em Design Gráfico. 
+                                Sou programador front-end e ilustrador autodidata, e diferente da ilustração onde o foco é na estética e impacto,
+                                nas interfaces, a usabilidade vem em primeiro lugar. 
+                               </p>
+                           <!--  <a class="btn-solid-lg page-scroll" href="#your-link"><i class="fab fa-apple"></i>APP
+                                STORE</a>
+                            <a class="btn-solid-lg page-scroll" href="#your-link"><i class="fab fa-google-play"></i>PLAY
+                                STORE</a> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="image-container">
+                            <!--   <img class="img-fluid" src="images/header-iphone.png" alt="alternative"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-- 
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="p-small">Copyright © Leno - Mobile App Landing Page Template by <a
+                                href="http://www.inovatik.com">Inovatik</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+ -->
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!-- 
+    <div class="footer">
+        <div class="container">
+         
+                <div class="col-md-4">
+                    <div class="footer-col middle">
+                        <h4>Important Links</h4>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Our business partners <a class="turquoise" href="#your-link">startupguide.com</a></div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Read our <a class="turquoise" href="terms-conditions.html">Terms & Conditions</a>, <a class="turquoise" href="privacy-policy.html">Privacy Policy</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="col-md-4">
+                    <div class="footer-col last">
+                        <h4>Social Media</h4>
+                      
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-google-plus-g fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </div> 
+                </div> 
+            </div> 
+        </div>  -->
+
+
+
+
+
+
+
+
+
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/charming.min.js"></script>
+    <script src="js/demo1.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/flickity.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
