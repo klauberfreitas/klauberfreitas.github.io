@@ -23,6 +23,18 @@ Colors:
 /******************************/
 /*     01. General Styles     */
 /******************************/
+
+
+
+@media only screen and (max-width: 1600px) {
+
+
+  
+	
+}
+
+
+
 body,
 html {
     width: 100%;
@@ -109,6 +121,9 @@ a.white {
 .testimonial-author {
 	font: 700 1rem/1.5rem "Montserrat", sans-serif;
 }
+
+
+
 
 .btn-solid-reg {
 	display: inline-block;
@@ -689,12 +704,12 @@ input[type='checkbox'] {
 	margin-top: 0;
 	border: none;
 	border-radius: 0.25rem;
-	background-color:  #33af67;
+	background-color:  #d6aa84;
 }
 
 
 .navbar-custom .dropdown-item:hover {
-	background-color: #33af67;
+	background-color: #d6aa84;
 }
 
 .header #js-rotating {
@@ -704,48 +719,30 @@ input[type='checkbox'] {
 
 }
 
-.demo-1 {
-	--color-link: #de4a3d !important;
-	}
-.social-main {
-		--color-link: #212121 !important;
-		margin-left: 85% !important
-}
-	
 
 
-.orientation {
-	font-size: 8rem !important;
-	bottom: 8vmax;
-	left: 0;
-	padding-left: 6vmax;
-	z-index: 1000;
-	line-height: 0.8;
-
-
-}
-	.navbar-custom.top-nav-collapse {
+.navbar-custom.top-nav-collapse {
         padding: 0.5rem 1.5rem 0.5rem 2rem;
 		box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
-		background-color: #e2ff1d;
+		background-color: #212121;
 	}
 
 	.navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
 	.navbar-custom.top-nav-collapse .nav-item .nav-link.active {
-		color: #e2ff1d;
+		color: #de4a3d;
 	}
 
 	.navbar-custom .fa-stack:hover .fa-stack-1x {
-		color: #e2ff1d;
+		color: #000;
 	}
 
 .navbar-custom .dropdown-item:hover .item-text {
-	color: #e2ff1d;
+	color: #000;
 }
 
 
 .navbar-custom .dropdown-item .item-text {
-	font: 700 0.75rem/1.5rem "Montserrat", sans-serif;
+	font: 700 1.0rem/1.5rem "Montserrat", sans-serif;
 }
 
 
@@ -1404,9 +1401,7 @@ input[type='checkbox'] {
 	background-color: #262431;
 }
 
-.footer .footer-col {
-	margin-bottom: 2.25rem;
-}
+
 
 .footer h4 {
 	margin-bottom: 1rem;
@@ -1796,8 +1791,8 @@ a:hover.back-to-top {
 
 	/* Header */
 	.header .header-content {
-		padding-top: 13rem;
-		padding-bottom: 10rem;
+
+	
 		text-align: left;
 	}
 
@@ -2074,19 +2069,17 @@ a:hover.back-to-top {
 
 
 	/* Footer */
-	.footer .footer-col {
-		width: 90%;
-	}
+	
 
 	.footer .footer-col.middle {
 		margin-right: auto;
 		margin-left: auto;
 	}
 
-	.footer .footer-col.last {
-		margin-right: 0;
-		margin-left: auto;
-	}
+	
+
+
+
 	/* end of footer */
 
 
@@ -2107,3 +2100,5 @@ a:hover.back-to-top {
 	/* end of extra pages */
 }
 /* end of min-width width 1200px */
+
+
