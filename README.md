@@ -1,6 +1,5 @@
-# oikabin.github.io
-Site pessoal -  Personal website.
+# Portfólio pessoal
 
-Construído em Bootstrap/ HTML/ CSS e JS. 
+
 
 

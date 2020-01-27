@@ -1,12 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
-
 @media screen and (min-device-width: 0px) and (max-device-width: 600px) {
-	
 	.col-lg-4 {
 		padding-left: 0px !important;
-
 	}
-	
 	.codrops-header {
 		display: block;
 		text-align: center;
@@ -30,8 +26,7 @@
 		white-space: pre;
 	}
 	.p-large {
-		color: 
-	#fff;
+		color: #fff;
 	}
 	h1 {
 		color: #f1f1f8;
@@ -52,7 +47,7 @@
 	.social-main {
 		--color-link: #212121 !important;
 		margin-left: 75% !important;
-		top: 70%;
+		top: 65%;
 		position: absolute;
 	}
 	.orientation {
@@ -63,7 +58,6 @@
 		line-height: 0.8;
 		--font-scroll-text: 'Roboto Mono', monospace;
 	}
-
 	.content__text {
 		position: absolute;
 		bottom: 6vmax;
@@ -123,6 +117,7 @@
 	font-size: 1.8rem;
 	bottom: -40vmax;
 }
+
 .social-main {
 	--color-link: hover #212121 !important;
 	--color-link: #212121 !important;
@@ -158,36 +153,47 @@
 	opacity: 0;
 	transition: .5s ease;
 }
+
 .nighty {
 	background-color: #7142de;
 }
+
 .eventime {
 	background-color: #5c07a3;
 }
+
 .rpgista {
 	background-color: #f8b44f;
 }
+
 .mmf {
 	background-color: #541820;
 }
+
 .leivas {
 	background-color: #003291;
 }
+
 .keone {
 	background-color: #0f0f11;
 }
+
 .floervas {
 	background-color: #117f5a;
 }
+
 .idebcam {
 	background-color: #01794b;
 }
+
 .sagaz {
 	background-color: #125a80;
 }
+
 .portal {
 	background-color: #1b499f;
 }
+
 .distribuidor {
 	background-color: #0f6751;
 }
@@ -217,7 +223,8 @@
 .link {
 	height: 100%;
 	width: 100%
-  }
+}
+
 .demos {
 	margin: 0;
 }
@@ -313,8 +320,6 @@
 	right: 44%;
 }
 
-
-
 .content__text {
 	position: absolute;
 	bottom: 6vmax;
@@ -331,6 +336,7 @@
 	-webkit-writing-mode: vertical-lr;
 	writing-mode: vertical-lr;
 	font-size: 5.5vw;
+	color: #d13737;
 }
 
 .fas2 {
@@ -344,6 +350,7 @@
 	-webkit-writing-mode: vertical-lr;
 	writing-mode: vertical-lr;
 	font-size: 7vw;
+	color: #d13737;
 }
 
 .sub-text {
@@ -403,6 +410,8 @@
 
 .demo-1 {
 	--color-link: #de4a3d !important;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 /* Hero image */
