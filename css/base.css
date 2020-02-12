@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
 @media screen and (min-device-width: 0px) and (max-device-width: 600px) {
+	.visibility {
+		display: none;
+	}
 	.col-lg-4 {
 		padding-left: 0px !important;
 	}
@@ -34,6 +37,10 @@
 		line-height: 2.4rem;
 		line-height: 2rem;
 	}
+	.observation {
+		color: #a5a5a5;
+		font: 0.9rem "Montserrat", sans-serif;
+	}
 	.fa-stack {
 		display: inline-block;
 		height: 2.1em;
@@ -44,11 +51,17 @@
 		font-size: 1.8rem;
 		bottom: -0vmax !important;
 	}
+	.demo-1 {
+		--color-link: #de4a3d !important;
+		overflow-x: hidden;
+		overflow-y: visible !important;
+	}
 	.social-main {
 		--color-link: #212121 !important;
-		margin-left: 75% !important;
+		margin-left: 50% !important;
 		top: 65%;
 		position: absolute;
+		display: flex;
 	}
 	.orientation {
 		--fontsize-scroll-text: 7vw;
